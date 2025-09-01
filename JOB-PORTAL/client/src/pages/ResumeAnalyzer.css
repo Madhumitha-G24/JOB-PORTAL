@@ -1,0 +1,187 @@
+/* ResumeAnalyzer.css - Updated to match Home page theme */
+
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #f5f6fa;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* Container */
+.resume-upload-container {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 2.5rem;
+  background: #fff;
+  color: #222;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(60,60,67,0.08);
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  border: 1px solid #e0e0e5;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.resume-upload-container:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 32px rgba(60,60,67,0.12);
+}
+
+/* File input & button */
+.resume-upload-container input[type="file"] {
+  margin: 20px 0;
+  padding: 8px;
+  background: #f5f6fa;
+  border: 1.5px dashed #bfc4cc;
+  border-radius: 10px;
+  color: #222;
+  transition: all 0.3s ease;
+}
+
+.resume-upload-container input[type="file"]:hover {
+  border-color: #007aff;
+  background: #f0f4fa;
+}
+
+.resume-upload-container button {
+  padding: 12px 25px;
+  background: linear-gradient(90deg, #007aff, #5ac8fa);
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  box-shadow: 0 2px 8px rgba(0,122,255,0.10);
+}
+
+ .resume-upload-container button:hover {
+  background: linear-gradient(90deg, #0051a8, #007aff);
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 4px 16px rgba(0,122,255,0.13);
+}
+
+/* Error text */
+.error {
+  color: #d70015;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+/* Results */
+.results {
+  margin-top: 30px;
+  text-align: left;
+}
+
+/* Section titles */
+.results h3 {
+  margin-bottom: 15px;
+  border-bottom: 1px solid #e0e0e5;
+  padding-bottom: 5px;
+  font-size: 1.2rem;
+  color: #007aff;
+}
+
+/* Skills list as pills */
+.results .skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.results .skills-list li {
+  background: #042dd1;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 0.95rem;
+  list-style: none;
+  color: #222;
+  border: 1px solid #e0e0e5;
+  transition: all 0.3s ease;
+}
+
+.results .skills-list li:hover {
+  background: #e9f0fb;
+  border-color: #007aff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,122,255,0.10);
+}
+
+/* Jobs grid */
+.results .jobs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.results .job-card {
+  background: #fff;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(60,60,67,0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: 1px solid #e0e0e5;
+}
+
+.results .job-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0,122,255,0.13);
+  border-color: #007aff;
+}
+
+.results .job-card h4 {
+  margin: 0 0 8px 0;
+  font-size: 1.1rem;
+  color: #007aff;
+}
+
+.results .job-card p {
+  margin: 3px 0;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.results .job-card button {
+  margin-top: 10px;
+  width: 100%;
+  padding: 8px;
+  background: linear-gradient(90deg, #007aff, #5ac8fa);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  font-weight: 600;
+}
+
+.results .job-card button:hover {
+  background: linear-gradient(90deg, #0051a8, #007aff);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,122,255,0.13);
+}
+
+/* Mobile adjustments */
+@media (max-width: 600px) {
+  .resume-upload-container {
+    padding: 20px;
+    margin: 20px;
+  }
+
+  .results .skills-list li {
+    font-size: 0.85rem;
+    padding: 6px 10px;
+  }
+  
+  .results .jobs-grid {
+    grid-template-columns: 1fr;
+  }
+}

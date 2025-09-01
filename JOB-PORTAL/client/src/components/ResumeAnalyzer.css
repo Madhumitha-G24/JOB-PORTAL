@@ -1,0 +1,449 @@
+.resume-upload-container {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 2rem;
+  background: rgba(20, 20, 20, 0.55);
+  backdrop-filter: blur(8px);
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  color: #eaeaea;
+  font-family: "Poppins", sans-serif;
+  border: 2px solid teal;
+  position: relative;
+  overflow: hidden;
+}
+
+.resume-upload-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, teal, #009688);
+  pointer-events: none;
+}
+
+/* Upload Header */
+.upload-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.upload-header h2 {
+  color: teal;
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-weight: 700;
+}
+
+.header-icon {
+  font-size: 1.8rem;
+  color: teal;
+}
+
+.upload-header p {
+  color: #64748b;
+  font-size: 1.1rem;
+}
+
+/* Upload Section */
+.upload-section {
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* File Drop Zone */
+.file-drop-zone {
+  border: 3px dashed #cbd5e1;
+  border-radius: 16px;
+  padding: 3rem 2rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: #f8fafc;
+  margin-bottom: 1.5rem;
+}
+
+.file-drop-zone:hover {
+  border-color: #667eea;
+  background: #f1f5f9;
+  transform: translateY(-2px);
+}
+
+.file-drop-zone.drag-over {
+  border-color: #667eea;
+  background: rgba(102, 126, 234, 0.05);
+  transform: scale(1.02);
+}
+
+.file-drop-zone.file-selected {
+  border-color: #667eea;
+  background: rgba(102, 126, 234, 0.05);
+}
+
+.upload-icon {
+  font-size: 3rem;
+  color: #667eea;
+  margin-bottom: 1rem;
+}
+
+.file-drop-zone h3 {
+  color: #1e293b;
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.file-drop-zone p {
+  color: #64748b;
+  font-size: 1rem;
+}
+
+/* File Info */
+.file-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.file-icon {
+  font-size: 2rem;
+  color: #667eea;
+}
+
+.file-details h4 {
+  color: #1e293b;
+  margin-bottom: 0.2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.file-details p {
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+.remove-file {
+  background: #ef4444;
+  border: none;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+}
+
+.remove-file:hover {
+  background: #dc2626;
+  transform: scale(1.1);
+}
+
+/* Error Message */
+.error-message {
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: #dc2626;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+}
+
+.error-icon {
+  font-size: 1.1rem;
+  color: #ef4444;
+}
+
+/* Analyze Button */
+.analyze-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.analyze-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.analyze-btn:hover::before {
+  left: 100%;
+}
+
+.analyze-btn:hover:not(:disabled) {
+  background: linear-gradient(135deg, #764ba2, #667eea);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+}
+
+.analyze-btn:disabled {
+  background: #cbd5e1;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.spinner {
+  animation: spin 1s linear infinite;
+  color: #667eea;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Results Section */
+.results-section {
+  margin-top: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* Skills Section */
+.skills-section {
+  margin-bottom: 2rem;
+}
+
+.skills-section h3 {
+  color: #1e293b;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.section-icon {
+  font-size: 1.2rem;
+  color: #667eea;
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  justify-content: center;
+}
+
+.skill-tag {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 25px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+  transition: all 0.3s;
+}
+
+.skill-tag:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+/* Jobs Section */
+.jobs-section h3 {
+  color: #1e293b;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.jobs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.job-card {
+  background: linear-gradient(145deg, #ffffff, #f8fafc);
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(102, 126, 234, 0.1);
+  transition: all 0.3s;
+  border: 1px solid #e2e8f0;
+  position: relative;
+  overflow: hidden;
+}
+
+.job-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.job-card:hover::before {
+  transform: scaleX(1);
+}
+
+.job-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 32px rgba(102, 126, 234, 0.2);
+  border-color: #667eea;
+}
+
+.job-header {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.job-header h4 {
+  color: #1e293b;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.company-badge {
+  background: rgba(102, 126, 234, 0.1);
+  color: #667eea;
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: 1px solid rgba(102, 126, 234, 0.2);
+}
+
+.job-skills {
+  margin-bottom: 1.5rem;
+}
+
+.job-skills strong {
+  color: #1e293b;
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.job-skills-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.job-skill-tag {
+  background: rgba(102, 126, 234, 0.1);
+  color: #667eea;
+  padding: 0.3rem 0.6rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  border: 1px solid rgba(102, 126, 234, 0.2);
+  font-weight: 500;
+}
+
+.apply-job-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-weight: 600;
+  font-size: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.apply-job-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.apply-job-btn:hover::before {
+  left: 100%;
+}
+
+.apply-job-btn:hover {
+  background: linear-gradient(135deg, #764ba2, #667eea);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .resume-upload-container {
+    padding: 1.5rem;
+    margin: 15px;
+  }
+  
+  .upload-header h2 {
+    font-size: 1.8rem;
+  }
+  
+  .file-drop-zone {
+    padding: 2rem 1rem;
+  }
+  
+  .jobs-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .skills-grid {
+    justify-content: flex-start;
+  }
+  
+  .file-info {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}

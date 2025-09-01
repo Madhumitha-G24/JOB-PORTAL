@@ -1,0 +1,140 @@
+/* General Page Layout */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: #0d0d0d;
+  color: #eaeaea;
+}
+
+/* Navbar */
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #111;
+  padding: 1rem 2rem;
+  border-bottom: 2px solid teal;
+}
+
+
+.navbar h2 {
+  color: teal;
+  margin: 0;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul li {
+  margin-left: 20px;
+}
+
+.navbar ul li a {
+  color: #eaeaea;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+  color: teal;
+}
+
+/* Home Section */
+/* Home Section */
+.home {
+  text-align: center;
+  padding: 40px;
+  background: linear-gradient(to right, #0d0d0d, #1a1a1a);
+}
+
+.home h1 {
+  color: teal;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.home input {
+  padding: 10px;
+  width: 300px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.home button {
+  padding: 10px 20px;
+  background: #0077b6;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.home button:hover {
+  background: #023e8a;
+}
+
+/* Job List */
+.job-list {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.job-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+.job-card h3 {
+  margin: 0 0 10px 0;
+  color: #0077b6;
+}
+
+.job-card button {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background: #0096c7;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.job-card button:hover {
+  background: #023e8a;
+}
+
+/* Resume Upload */
+.resume-upload {
+  text-align: center;
+  padding: 30px;
+}
+
+.resume-upload input {
+  margin: 20px 0;
+}
+
+.resume-upload button {
+  padding: 10px 20px;
+  background: #0077b6;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.resume-upload button:hover {
+  background: #023e8a;
+}
